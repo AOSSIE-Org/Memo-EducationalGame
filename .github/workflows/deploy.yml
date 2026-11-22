@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-# Builds the app and publishes it to GitHub Pages (https://memo.aossie.org).
+# Builds the app and publishes it to GitHub Pages (https://edumemo.aossie.org).
 # Requires Settings → Pages → Source: "GitHub Actions". The custom domain is
 # configured in the repository's Pages settings.
 

@@ -4,7 +4,7 @@ Memo is a purely local web app: it has no backend and no accounts, and all playe
 
 ## Supported Versions
 
-Only the latest version on the `main` branch, deployed at [memo.aossie.org](https://memo.aossie.org/), is supported. The web app updates itself, so fixes reach every user automatically.
+Only the latest version on the `main` branch, deployed at [edumemo.aossie.org](https://edumemo.aossie.org/), is supported. The web app updates itself, so fixes reach every user automatically.
 
 ## Reporting a Vulnerability
 
@@ -25,6 +25,6 @@ Report them privately by email to [contact@aossie.org](mailto:contact@aossie.org
 
 ## Scope
 
-In scope: the code in this repository, its build and deployment configuration, and the deployed app at memo.aossie.org.
+In scope: the code in this repository, its build and deployment configuration, and the deployed app at edumemo.aossie.org.
 
 Out of scope: vulnerabilities in third-party services (GitHub, browsers' text-to-speech services) and in dependencies, unless the way Memo uses them makes it exploitable — please report those to their maintainers. Known vulnerabilities in dependencies are tracked automatically with OSV-Scanner and Dependabot.

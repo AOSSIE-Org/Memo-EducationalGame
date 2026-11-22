@@ -12,7 +12,7 @@
 <!-- Organization Name -->
 <div align="center">
 
-[![Static Badge](https://img.shields.io/badge/memo.aossie.org-228B22?style=for-the-badge&labelColor=FFC517)](https://memo.aossie.org/)
+[![Static Badge](https://img.shields.io/badge/edumemo.aossie.org-228B22?style=for-the-badge&labelColor=FFC517)](https://edumemo.aossie.org/)
 
 <!-- Correct deployed url to be added -->
 
@@ -60,7 +60,7 @@
 <h1>Memo</h1>
 </div>
 
-[Memo](https://memo.aossie.org/) is a memory card game for children, based on the classic game of pairs: the cards lie face down, and each round the child turns two of them, trying to find the pairs. Every card has a picture and a description, which is shown under the card and read aloud when the card is turned, so children learn while they play: coloured geometric shapes, the capitals of the world, or any cards that parents and teachers make themselves. It is a sister app of [Flag Quiz](https://github.com/AOSSIE-Org/FlagQuiz), with the same look, the same icons and most of its code, and like it, it is purely local: no accounts, no ads, no tracking, and it works offline.
+[Memo](https://edumemo.aossie.org/) is a memory card game for children, based on the classic game of pairs: the cards lie face down, and each round the child turns two of them, trying to find the pairs. Every card has a picture and a description, which is shown under the card and read aloud when the card is turned, so children learn while they play: coloured geometric shapes, the capitals of the world, or any cards that parents and teachers make themselves. It is a sister app of [Flag Quiz](https://github.com/AOSSIE-Org/FlagQuiz), with the same look, the same icons and most of its code, and like it, it is purely local: no accounts, no ads, no tracking, and it works offline.
 
 ---
 
@@ -99,7 +99,7 @@ People write a card set's name, topics and descriptions in the app's language. T
 
 Following Google's recommendations for apps that run only in the browser: [Google Identity Services](https://developers.google.com/identity/oauth2/web/guides/use-token-model) **token model** (a sign-in popup, no client secret, no redirect, no refresh token), the narrowest scope **`drive.file`** (the app can only see the files it creates; it's a non-sensitive scope), the access token kept **in memory only** and **revoked** right after the upload, and Google's script loaded **only** when the card set editor opens. To enable it in a deployment:
 
-1. In [Google Cloud Console](https://console.cloud.google.com/), enable the Google Drive API and create an OAuth client ID of type **Web application**, with the app's origin (e.g. `https://memo.aossie.org`, and `http://localhost:5173` for development) under *Authorized JavaScript origins*. Configure the OAuth consent screen with the `drive.file` scope.
+1. In [Google Cloud Console](https://console.cloud.google.com/), enable the Google Drive API and create an OAuth client ID of type **Web application**, with the app's origin (e.g. `https://edumemo.aossie.org`, and `http://localhost:5173` for development) under *Authorized JavaScript origins*. Configure the OAuth consent screen with the `drive.file` scope.
 2. Build with the client ID: `VITE_GOOGLE_CLIENT_ID=<id>.apps.googleusercontent.com npm run build` (for the GitHub Pages workflow, as a repository variable passed to the build step). A client ID is public by design; there is no secret.
 
 Without a client ID, the Drive button is shown faded and says that saving to Google Drive is not set up.
@@ -155,7 +155,7 @@ Loaded files are untrusted: zip files are limited in size before they are unpack
    - [x] works offline and can be installed as a PWA.
    - [x] stores all data locally (IndexedDB); it only contacts other services when a person loads a card set from a link or saves one to their Google Drive.
    - [x] fits on one screen on desktop and on phones in landscape.
-   - [ ] is deployed to [memo.aossie.org](https://memo.aossie.org/) (domain to be confirmed).
+   - [x] is deployed to [edumemo.aossie.org](https://edumemo.aossie.org/).
 
 ---
 
