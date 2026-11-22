@@ -24,6 +24,11 @@ const FONT = 'inter-latin-wght-normal.woff2';
 export const DONATE_URL = 'https://buymeacoffee.com/aossie';
 
 /** Reads the exported array of a generated data module. */
+async function readPhotoSets() {
+  const src = await readFile(join(ROOT, 'src', 'data', 'photoSets.ts'), 'utf8');
+  return JSON.parse(src.slice(src.indexOf('PHOTO_SETS: Record<string, PhotoCard[]> = ') + 42).replace(/;\s*$/, ''));
+}
+
 async function readData(file) {
   const src = await readFile(join(ROOT, 'src', 'data', file), 'utf8');
   return JSON.parse(src.slice(src.indexOf('= [') + 2).replace(/;\s*$/, ''));
@@ -45,13 +50,17 @@ const LINKS = {
 /** Placeholders whose link depends on the message. */
 const MESSAGE_LINKS = {
   'credits.names': { licence: '<a href="https://www.unicode.org/license.txt">Unicode License v3</a>' },
+  'credits.flags': { source: '<a href="https://github.com/hampusborgos/country-flags">hampusborgos/country-flags</a>' },
+  'credits.photoSets': { wikipedia: '<a href="https://www.wikipedia.org/">Wikipedia</a>' },
 };
-const TEXT_KEYS = ['credits.donateTitle', 'credits.donateButton', 'credits.data', 'credits.photos', 'madeBy'];
+const TEXT_KEYS = ['credits.donateTitle', 'credits.donateButton', 'credits.data', 'credits.photos', 'credits.otherPhotos', 'madeBy'];
 const HTML_KEYS = [
   'credits.lead',
   'credits.source',
   'credits.donateText',
   'credits.shapes',
+  'credits.photoSets',
+  'credits.flags',
   'credits.capitals',
   'credits.names',
   'credits.photosNote',
@@ -92,6 +101,24 @@ export async function buildCredits() {
       </ol>
     </article>`;
     })
+    .join('');
+
+  // Photos of the other photo sets (fruits, animals, minerals), one card per photo.
+  const photoSets = await readPhotoSets();
+  const enCards = { ...JSON.parse(await readFile(join(ROOT, 'src', 'locales', 'cards', 'en.json'), 'utf8')), ...JSON.parse(await readFile(join(ROOT, 'src', 'locales', 'cards-extra', 'en.json'), 'utf8')) };
+  const otherPhotos = Object.entries(photoSets)
+    .flatMap(([set, cards]) =>
+      cards.map(
+        (p) => `
+    <article class="card small">
+      <img class="combined" src="cards/${set}/${p.id}.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="${set}.${p.id}">${esc(enCards[`${set}.${p.id}`] ?? p.article)}</h3>
+      <p class="photos"><a href="${esc(p.source)}">${esc(p.title)}</a><span title="© ${esc(p.author)}">© ${esc(p.author)} · ${
+        p.licenseUrl ? `<a href="${esc(p.licenseUrl)}">${esc(p.license)}</a>` : esc(p.license)
+      }</span></p>
+    </article>`,
+      ),
+    )
     .join('');
 
   const html = `<!doctype html>
@@ -185,6 +212,9 @@ export async function buildCredits() {
   .data { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .data li { padding: 12px 16px; border-radius: 12px; background: var(--surface); }
   .note { color: var(--grey); font-size: 15px; }
+  .cards:has(.small) { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .card.small h3 { margin: 8px 0 4px; font-size: 15px; }
+  .card.small .photos { display: grid; grid-template-columns: 1fr; padding: 0; margin: 0; }
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .card { padding: 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
   .card h3 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 0 0 10px; font-size: 18px; }
@@ -226,9 +256,15 @@ export async function buildCredits() {
   <h2 data-i18n="credits.data">${t('credits.data')}</h2>
   <ul class="data">
     <li data-i18n="credits.shapes">${t('credits.shapes')}</li>
+    <li data-i18n="credits.photoSets">${t('credits.photoSets')}</li>
+    <li data-i18n="credits.flags">${t('credits.flags')}</li>
     <li data-i18n="credits.capitals">${t('credits.capitals')}</li>
     <li data-i18n="credits.names">${t('credits.names')}</li>
   </ul>
+
+  <h2 data-i18n="credits.otherPhotos">${t('credits.otherPhotos')}</h2>
+  <div class="cards">${otherPhotos}
+  </div>
 
   <h2 data-i18n="credits.photos">${t('credits.photos')}</h2>
   <p class="note" data-i18n="credits.photosNote">${t('credits.photosNote')}</p>
@@ -261,6 +297,10 @@ export async function buildCredits() {
             var n = d.capitals[el.getAttribute('data-capital')];
             if (n) el.textContent = n;
           });
+          document.querySelectorAll('[data-card]').forEach(function (el) {
+            var n = d.cards && d.cards[el.getAttribute('data-card')];
+            if (n) el.textContent = n;
+          });
           document.querySelectorAll('[data-country]').forEach(function (el) {
             var n = d.countries[el.getAttribute('data-country')];
             if (n) el.textContent = n;
@@ -291,6 +331,10 @@ export async function buildCredits() {
       html: Object.fromEntries(HTML_KEYS.map((k) => [k, render(messages, k)])),
       capitals: Object.fromEntries(capitals.map((c) => [c.code, names.capitals[c.code]])),
       countries: Object.fromEntries(capitals.map((c) => [c.code, names.countries[c.code]])),
+      cards: {
+        ...JSON.parse(await readFile(join(ROOT, 'src', 'locales', 'cards', `${lang.code}.json`), 'utf8')),
+        ...JSON.parse(await readFile(join(ROOT, 'src', 'locales', 'cards-extra', `${lang.code}.json`), 'utf8').catch(() => '{}')),
+      },
     };
     await writeFile(join(I18N_DIR, `${lang.code}.json`), JSON.stringify(data));
   }

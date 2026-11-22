@@ -89,6 +89,9 @@
   .data { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
   .data li { padding: 12px 16px; border-radius: 12px; background: var(--surface); }
   .note { color: var(--grey); font-size: 15px; }
+  .cards:has(.small) { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+  .card.small h3 { margin: 8px 0 4px; font-size: 15px; }
+  .card.small .photos { display: grid; grid-template-columns: 1fr; padding: 0; margin: 0; }
   .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .card { padding: 14px; border-radius: 16px; background: var(--surface); border: 1px solid var(--border); }
   .card h3 { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 0 0 10px; font-size: 18px; }
@@ -130,9 +133,1260 @@
   <h2 data-i18n="credits.data">Data</h2>
   <ul class="data">
     <li data-i18n="credits.shapes">Pictures of shapes: drawn for Memo, free to use like the rest of the app.</li>
+    <li data-i18n="credits.photoSets">Photos of fruits, animals and minerals: from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, chosen through <a href="https://www.wikipedia.org/">Wikipedia</a> and <a href="https://www.wikidata.org/">Wikidata</a>; their names in every language: <a href="https://www.wikidata.org/">Wikidata</a> (CC0).</li>
+    <li data-i18n="credits.flags">Flags: from <a href="https://github.com/AOSSIE-Org/FlagQuiz">Flag Quiz</a>, which takes them from <a href="https://github.com/hampusborgos/country-flags">hampusborgos/country-flags</a> (public domain).</li>
     <li data-i18n="credits.capitals">Capitals and their photos: from <a href="https://github.com/AOSSIE-Org/FlagQuiz">Flag Quiz</a>, which takes them from <a href="https://www.wikidata.org/">Wikidata</a> (CC0) and <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>.</li>
     <li data-i18n="credits.names">Names of countries in other languages: <a href="https://cldr.unicode.org/">Unicode CLDR</a> (<a href="https://www.unicode.org/license.txt">Unicode License v3</a>); names of capitals: <a href="https://www.wikidata.org/">Wikidata</a> (CC0).</li>
   </ul>
+
+  <h2 data-i18n="credits.otherPhotos">Photos of fruits, animals and minerals</h2>
+  <div class="cards">
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/apple.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.apple">Apple</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Honeycrisp.jpg">Honeycrisp</a><span title="© Jonathunder">© Jonathunder · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/banana.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.banana">Banana</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Banana_on_whitebackground.jpg">Banana on whitebackground</a><span title="© Filo gèn'">© Filo gèn' · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/orange.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.orange">Orange</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Oranges_-_whole-halved-segment.jpg">Oranges - whole-halved-segment</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/grape.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.grape">Grape</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Wine_grapes03.jpg">Wine grapes03</a><span title="© Fir0002">© Fir0002 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/strawberry.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.strawberry">Strawberry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Strawberries.JPG">Strawberries</a><span title="© Unknown">© Unknown · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/pear.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.pear">Pear</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pear_DS.jpg">Pear DS</a><span title="© Augustus Binu : flickr">© Augustus Binu : flickr · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/peach.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.peach">Peach</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Autumn_Red_peaches.jpg">Autumn Red peaches</a><span title="© Jack Dykinga, USDA">© Jack Dykinga, USDA · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/cherry.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.cherry">Cherry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cherry_Stella444.jpg">Cherry Stella444</a><span title="© Benjamint444, edited by Fir0002">© Benjamint444, edited by Fir0002 · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/watermelon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.watermelon">Watermelon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Watermelon-garden.jpg">Watermelon-garden</a><span title="© Kumon">© Kumon · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/pineapple.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.pineapple">Pineapple</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pineapple_fruit_2.jpg">Pineapple fruit 2</a><span title="© Wilfredor">© Wilfredor · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/mango.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.mango">Mango</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mangos_-_single_and_halved.jpg">Mangos - single and halved</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/lemon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.lemon">Lemon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Lemon.jpg">Lemon</a><span title="© André Karwath aka Aka">© André Karwath aka Aka · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/kiwifruit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.kiwifruit">Kiwifruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kiwi_(Actinidia_chinensis)_1_Luc_Viatour.jpg">Kiwi (Actinidia chinensis) 1 Luc Viatour</a><span title="© Luc Viatour">© Luc Viatour · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/plum.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.plum">Plum</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Plum_on_tree02.jpg">Plum on tree02</a><span title="© fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8">© fir0002 flagstaffotos [at] gmail.com Canon 20D + Tamron 28-75mm f/2.8 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/apricot.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.apricot">Apricot</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Apricots.jpg">Apricots</a><span title="© Fir0002">© Fir0002 · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/blueberry.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.blueberry">Blueberry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Dish_of_blueberries.jpg">Dish of blueberries</a><span title="© Petar Milošević">© Petar Milošević · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/raspberry.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.raspberry">Raspberry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Raspberries05.jpg">Raspberries05</a><span title="© User:Fir0002">© User:Fir0002 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/coconut.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.coconut">Coconut</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Coconuts_-_single_and_cracked_open.jpg">Coconuts - single and cracked open</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/papaya.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.papaya">Papaya</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Papaya_cut_half.jpg">Papaya cut half</a><span title="© Maksym Kozlenko">© Maksym Kozlenko · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/pomegranate.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.pomegranate">Pomegranate</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Punica_granatum_004.JPG">Punica granatum 004</a><span title="© H. Zell">© H. Zell · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/common-fig.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.common-fig">Fig</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Smokve_na_grani.jpg">Smokve na grani</a><span title="© Silverije">© Silverije · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/melon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.melon">Melon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cantaloupe_and_canary_melon.jpg">Cantaloupe and canary melon</a><span title="© Atomicbre at English Wikipedia">© Atomicbre at English Wikipedia · <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/lime.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.lime">Lime</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Backyard_limes.jpg">Backyard limes</a><span title="© Wtstoffs at en.wikipedia">© Wtstoffs at en.wikipedia · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/grapefruit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.grapefruit">Grapefruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Grapefruits_-_whole-halved-segments.jpg">Grapefruits - whole-halved-segments</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/avocado.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.avocado">Avocado</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Avocado_with_cross_section_edit.jpg">Avocado with cross section edit</a><span title="© Muhammad Mahdi Karim">© Muhammad Mahdi Karim · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/blackberry.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.blackberry">Blackberry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Blackberry_(Rubus_fruticosus).jpg">Blackberry (Rubus fruticosus)</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/commonFruits/tangerine.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="commonFruits.tangerine">Tangerine</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tangerine_2009-03-11.jpg">Tangerine 2009-03-11</a><span title="© Kaldari">© Kaldari · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/durian.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.durian">Durian</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Owoce_Durian.jpg">Owoce Durian</a><span title="© Agnieszka Kwiecień, Nova">© Agnieszka Kwiecień, Nova · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/rambutan.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.rambutan">Rambutan</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Rambutan_masak_didahan.JPG">Rambutan masak didahan</a><span title="© Tu7uh">© Tu7uh · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/purple-mangosteen.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.purple-mangosteen">Mangosteen</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Berthe_Hoola_van_Nooten48.jpg">Berthe Hoola van Nooten48</a><span title="© Berthe Hoola van Nooten (1817-1892), Pieter De Pannemaeker (lithographer)">© Berthe Hoola van Nooten (1817-1892), Pieter De Pannemaeker (lithographer) · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/pitaya.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.pitaya">Dragon fruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Dragon_fruit_(Bangalore,_2025)_02.jpg">Dragon fruit (Bangalore, 2025) 02</a><span title="© Gpkp">© Gpkp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/lychee.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.lychee">Lychee</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Lychee_fruits_and_seed.jpg">Lychee fruits and seed</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/longan.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.longan">Longan</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:C%C3%A2y_nh%C3%A3n.jpg">Cây nhãn</a><span title="© Bùi Thụy Đào Nguyên">© Bùi Thụy Đào Nguyên · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/jackfruit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.jackfruit">Jackfruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:The_jackfruit_is_holding_on_to_the_tree.jpg">The jackfruit is holding on to the tree</a><span title="© This work was made by Tushar Hossain and released under the license(s) stated below. Please feel free to use it for any purpose as long as you credit Tushar Hossain as author and follow the terms of t">© This work was made by Tushar Hossain and released under the license(s) stated below. Please feel free to use it for any purpose as long as you credit Tushar Hossain as author and follow the terms of t · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/carambola.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.carambola">Star fruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Carambolas765pt.jpg">Carambolas765pt</a><span title="© K-MUS">© K-MUS · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/passiflora-edulis.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.passiflora-edulis">Passion fruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Markisa_madu_manis_seperti_kamu.jpg">Markisa madu manis seperti kamu</a><span title="© Rarani">© Rarani · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/guava.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.guava">Guava</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Guava_fruit.jpg">Guava fruit</a><span title="© Amada44">© Amada44 · <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/japanese-persimmon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.japanese-persimmon">Persimmon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kaki_20041002.jpg">Kaki 20041002</a><span title="© Sphl">© Sphl · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/kumquat.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.kumquat">Kumquat</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kumquat_from_Spain.jpg">Kumquat from Spain</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/feijoa.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.feijoa">Feijoa</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Goiaba-serrana,_ou_guarobi_(do_guarani_%27fruto_verde%27),_Feijoa_sellowiana,_em_Bag%C3%A9,_RS,_Brasil_-_55238473195.jpg">Goiaba-serrana, ou guarobi (do guarani 'fruto verde'), Feijoa sellowiana, em Bagé, RS, Brasil - 55238473195</a><span title="© Gabriel Collares">© Gabriel Collares · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/cherimoya.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.cherimoya">Cherimoya</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cherimoya_tree_hg.jpg">Cherimoya tree hg</a><span title="© Hannes Grobe 21:31, 5 November 2006 (UTC)">© Hannes Grobe 21:31, 5 November 2006 (UTC) · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/salak.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.salak">Snake fruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:(MHNT)_Salacca_zalacca_-_fruit.jpg">(MHNT) Salacca zalacca - fruit</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/soursop.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.soursop">Soursop</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Annona_muricata_1.jpg">Annona muricata 1</a><span title="© Damien Boilley from suburbs of Paris, France">© Damien Boilley from suburbs of Paris, France · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/cucumis-metuliferus.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.cucumis-metuliferus">Horned melon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Chifrudo.JPG">Chifrudo</a><span title="© Joseolgon">© Joseolgon · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/jabuticaba.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.jabuticaba">Jabuticaba</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Jabuticaba_fruto.jpg">Jabuticaba fruto</a><span title="© Alexandre CampolinaCampola">© Alexandre CampolinaCampola · <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/quince.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.quince">Quince</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cydonia.jpg">Cydonia</a><span title="© Unknown">© Unknown · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/mespilus-germanica.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.mespilus-germanica">Medlar</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Medlar_pomes_and_leaves.jpg">Medlar pomes and leaves</a><span title="© Unknown">© Unknown · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/physalis-peruviana.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.physalis-peruviana">Cape gooseberry</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cape_gooseberry_bunch_in_hand.jpg">Cape gooseberry bunch in hand</a><span title="© In Transit">© In Transit · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/tamarillo.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.tamarillo">Tamarillo</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tamarillo_querschnitt.jpg">Tamarillo querschnitt</a><span title="© No machine-readable author provided. Manducus assumed (based on copyright claims).">© No machine-readable author provided. Manducus assumed (based on copyright claims). · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/loquat.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.loquat">Loquat</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Loquat_-_whole_and_cross_section.jpg">Loquat - whole and cross section</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/manilkara-zapota.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.manilkara-zapota">Sapodilla</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sapodilla_Malay_with_seeds.jpg">Sapodilla Malay with seeds</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/buddha-s-hand.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.buddha-s-hand">Buddha's hand</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Buddhas-Hand-Zitrone_02.jpg">Buddhas-Hand-Zitrone 02</a><span title="© Burkhard Mücke">© Burkhard Mücke · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/ackee.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.ackee">Ackee</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ackee_001.jpg">Ackee 001</a><span title="© Jerome Walker">© Jerome Walker · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/rareFruits/breadfruit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="rareFruits.breadfruit">Breadfruit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Artocarpus_altilis_(fruit).jpg">Artocarpus altilis (fruit)</a><span title="© Hans Hillewaert">© Hans Hillewaert · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/quartz.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.quartz">Quartz</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Quartz_Br%C3%A9sil.jpg">Quartz Brésil</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/amethyst.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.amethyst">Amethyst</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Amethyst._Magaliesburg,_South_Africa.jpg">Amethyst. Magaliesburg, South Africa</a><span title="© JJ Harrison (https://jjharrison.com.au/)">© JJ Harrison (https://jjharrison.com.au/) · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/pyrite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.pyrite">Pyrite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pyrite_-_Huanzala_mine,_Huallanca,_Bolognesi,_Ancash,_Peru.jpg">Pyrite - Huanzala mine, Huallanca, Bolognesi, Ancash, Peru</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/calcite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.calcite">Calcite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Calcite_(Mexique)_.jpg">Calcite (Mexique) </a><span title="© Géry PARENT">© Géry PARENT · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/fluorite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.fluorite">Fluorite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Fluorine_MHNT.MIN.2010.16.1.jpg">Fluorine MHNT.MIN.2010.16.1</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/malachite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.malachite">Malachite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Malachit,_Kupferspat.jpg">Malachit, Kupferspat</a><span title="© Burkhard Mücke">© Burkhard Mücke · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/azurite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.azurite">Azurite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Azurite-Malachite-188417.jpg">Azurite-Malachite-188417</a><span title="© Robert M. Lavinsky">© Robert M. Lavinsky · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/gypsum.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.gypsum">Gypsum</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Gypse_Caresse.jpg">Gypse Caresse</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/halite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.halite">Halite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:SaltCrystaUSGOV.jpg">SaltCrystaUSGOV</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/muscovite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.muscovite">Muscovite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mineraly.sk_-_muskovit.jpg">Mineraly.sk - muskovit</a><span title="© Unknown">© Unknown · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/orthoclase.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.orthoclase">Orthoclase</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:OrthoclaseBresil.jpg">OrthoclaseBresil</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/magnetite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.magnetite">Magnetite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Magnetite.jpg">Magnetite</a><span title="© Archaeodontosaurus">© Archaeodontosaurus · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/hematite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.hematite">Hematite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Hematite.jpg">Hematite</a><span title="© DanielCD~commonswiki">© DanielCD~commonswiki · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/galena.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.galena">Galena</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Galena_-_Huallanca,_Bologesi,_Ancash,_Peru.jpg">Galena - Huallanca, Bologesi, Ancash, Peru</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/sulfur.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.sulfur">Sulfur</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sulfur_-_El_Desierto_mine,_San_Pablo_de_Napa,_Daniel_Campos_Province,_Potos%C3%AD,_Bolivia.jpg">Sulfur - El Desierto mine, San Pablo de Napa, Daniel Campos Province, Potosí, Bolivia</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/gold.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.gold">Gold</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Gold-crystals.jpg">Gold-crystals</a><span title="© Alchemist-hp (talk) www.pse-mendelejew.de">© Alchemist-hp (talk) www.pse-mendelejew.de · <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en">CC BY-SA 3.0 de</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/native-copper.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.native-copper">Copper</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Copper-21991.jpg">Copper-21991</a><span title="© Robert M. Lavinsky">© Robert M. Lavinsky · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/diamond.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.diamond">Diamond</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Rough_Diamond.jpg">Rough Diamond</a><span title="© DGPC/ADF Luísa Oliveira">© DGPC/ADF Luísa Oliveira · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/beryl.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.beryl">Beryl</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Beryl-0128-01a.jpg">Beryl-0128-01a</a><span title="© Robert M. Lavinsky">© Robert M. Lavinsky · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/corundum.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.corundum">Corundum</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Corundum.jpg">Corundum</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/topaz.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.topaz">Topaz</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Topaze_Br%C3%A9sil.jpg">Topaze Brésil</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/garnet.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.garnet">Garnet</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:GarnetCrystalUSGOV.jpg">GarnetCrystalUSGOV</a><span title="© Unknown authorUnknown author">© Unknown authorUnknown author · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/turquoise.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.turquoise">Turquoise</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Turquoise_with_quartz.jpg">Turquoise with quartz</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/talc.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.talc">Talc</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Talc.jpg">Talc</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/graphite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.graphite">Graphite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:GraphiteUSGOV.jpg">GraphiteUSGOV</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/tourmaline.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.tourmaline">Tourmaline</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:TourmalineUSGOV.jpg">TourmalineUSGOV</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/opal.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.opal">Opal</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Opal_banded.jpg">Opal banded</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/rhodochrosite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.rhodochrosite">Rhodochrosite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Rhodocrosite_6(P%C3%A9rou).jpg">Rhodocrosite 6(Pérou)</a><span title="© Géry Parent">© Géry Parent · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/vanadinite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.vanadinite">Vanadinite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Vanadinite_-_ACF_mine,_Mibladen,_Morocco.jpg">Vanadinite - ACF mine, Mibladen, Morocco</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/minerals/celestine.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="minerals.celestine">Celestine</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Celestine_-_Sakoany_deposit,_Katsepy,_Mitsinjo,_Boeny,_Madagascar.jpg">Celestine - Sakoany deposit, Katsepy, Mitsinjo, Boeny, Madagascar</a><span title="© Ivar Leidus">© Ivar Leidus · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/western-honey-bee.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.western-honey-bee">Honey bee</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:(MHNT)_Apis_mellifera_(female)_-_on_viburnum_tinus_flowers.jpg">(MHNT) Apis mellifera (female) - on viburnum tinus flowers</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/coccinellidae.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.coccinellidae">Ladybird</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ladybug.jpg">Ladybug</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/monarch-butterfly.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.monarch-butterfly">Monarch butterfly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Danaus_plexippus_MHNT_femelle.jpg">Danaus plexippus MHNT femelle</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/dragonfly.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.dragonfly">Dragonfly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sympetrum_flaveolum_-_side_(aka).jpg">Sympetrum flaveolum - side (aka)</a><span title="© André Karwath aka Aka">© André Karwath aka Aka · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/ant.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.ant">Ant</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Meat_eater_ant_feeding_on_honey02.jpg">Meat eater ant feeding on honey02</a><span title="© fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8">© fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/grasshopper.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.grasshopper">Grasshopper</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Oxya_yezoensis_November_2007_WUXGA.jpg">Oxya yezoensis November 2007 WUXGA</a><span title="© Laitche">© Laitche · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/housefly.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.housefly">Housefly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Musca_domestica_housefly.jpg">Musca domestica housefly</a><span title="© Muhammad Mahdi Karim">© Muhammad Mahdi Karim · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/mantis.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.mantis">Praying mantis</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mantis_religiosa_MHNT_enti%C3%A8re.jpg">Mantis religiosa MHNT entière</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/lucanus-cervus.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.lucanus-cervus">Stag beetle</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Escanyapolls.JPG">Escanyapolls</a><span title="© No machine-readable author provided. Esv assumed (based on copyright claims).">© No machine-readable author provided. Esv assumed (based on copyright claims). · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/firefly.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.firefly">Firefly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Firefly_Nevit_02670_cr.jpg">Firefly Nevit 02670 cr</a><span title="© Nevit Dilmen (talk)">© Nevit Dilmen (talk) · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/cricket.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.cricket">Cricket</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Crickets_feeding_on_carrot.jpg">Crickets feeding on carrot</a><span title="© Sean Wallace">© Sean Wallace · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/wasp.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.wasp">Wasp</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:European_wasp_white_bg.jpg">European wasp white bg</a><span title="© User:Fir0002">© User:Fir0002 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/bumblebee.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.bumblebee">Bumblebee</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bombus_terrestris.jpg">Bombus terrestris</a><span title="© Marco Almbauer">© Marco Almbauer · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/cicada.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.cicada">Cicada</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Neotibicen_linnei.jpg">Neotibicen linnei</a><span title="© Bruce Marlin">© Bruce Marlin · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/actias-luna.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.actias-luna">Luna moth</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Actias_luna_female_sjh.JPG">Actias luna female sjh</a><span title="© No machine-readable author provided. Kugamazog~commonswiki assumed (based on copyright claims).">© No machine-readable author provided. Kugamazog~commonswiki assumed (based on copyright claims). · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/phasmatodea.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.phasmatodea">Stick insect</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Malaysische_Gespensterschrecke.jpg">Malaysische Gespensterschrecke</a><span title="© de:Roger Zenner / commons:Roger Zenner">© de:Roger Zenner / commons:Roger Zenner · <a href="https://creativecommons.org/licenses/by-sa/2.0/de/deed.en">CC BY-SA 2.0 de</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/papilio-machaon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.papilio-machaon">Swallowtail butterfly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Aix-en-provence_1980_-_Schwalbenschwanz_(ExaI0327).jpg">Aix-en-provence 1980 - Schwalbenschwanz (ExaI0327)</a><span title="© Michael Wittwer">© Michael Wittwer · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/damselfly.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.damselfly">Damselfly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ischnura_heterosticta02.jpg">Ischnura heterosticta02</a><span title="© fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8 + Canon MT 24-EX">© fir0002 flagstaffotos [at] gmail.com Canon 20D + Sigma 150mm f/2.8 + Canon MT 24-EX · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/dynastinae.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.dynastinae">Rhinoceros beetle</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Dynastinae.jpg">Dynastinae</a><span title="© Anaxibia">© Anaxibia · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/mosquito.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.mosquito">Mosquito</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mosquito_on_human_skin.jpg">Mosquito on human skin</a><span title="© James Gathany, USCDCP">© James Gathany, USCDCP · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/aphid.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.aphid">Aphid</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Acyrthosiphon_pisum_(pea_aphid)-PLoS.jpg">Acyrthosiphon pisum (pea aphid)-PLoS</a><span title="© Shipher Wu (photograph) and Gee-way Lin (aphid provision), National Taiwan University">© Shipher Wu (photograph) and Gee-way Lin (aphid provision), National Taiwan University · <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/termite.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.termite">Termite</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Coptotermes_formosanus_shiraki_USGov_k8204-7.jpg">Coptotermes formosanus shiraki USGov k8204-7</a><span title="© Photo by Scott Bauer.">© Photo by Scott Bauer. · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/cockroach.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.cockroach">Cockroach</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Blaberus_giganteus_MHNT_dos.jpg">Blaberus giganteus MHNT dos</a><span title="© Didier Descouens">© Didier Descouens · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/insects/aglais-io.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="insects.aglais-io">Peacock butterfly</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Inachis_io_Lill-Jansskogen.JPG">Inachis io Lill-Jansskogen</a><span title="© Korall">© Korall · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/lion.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.lion">Lion</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:PZ_lion_pride.jpg">PZ lion pride</a><span title="© GinaFranchi">© GinaFranchi · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/tiger.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.tiger">Tiger</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Adult_male_Royal_Bengal_tiger.jpg">Adult male Royal Bengal tiger</a><span title="© Seemaleena">© Seemaleena · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/african-bush-elephant.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.african-bush-elephant">Elephant</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:178_Male_African_bush_elephant_in_Etosha_National_Park_Photo_by_Giles_Laurent.jpg">178 Male African bush elephant in Etosha National Park Photo by Giles Laurent</a><span title="© Giles Laurent">© Giles Laurent · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/giraffe.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.giraffe">Giraffe</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Giraffe_Mikumi_National_Park.jpg">Giraffe Mikumi National Park</a><span title="© Muhammad Mahdi Karim Facebook The making of this document was supported by Wikimedia CH. (Submit your project!) For all the files concerned, please see the category Supported by Wikimedia CH. العربية ">© Muhammad Mahdi Karim Facebook The making of this document was supported by Wikimedia CH. (Submit your project!) For all the files concerned, please see the category Supported by Wikimedia CH. العربية  · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/zebra.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.zebra">Zebra</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Plains_Zebra_Equus_quagga.jpg">Plains Zebra Equus quagga</a><span title="© Muhammad Mahdi Karim">© Muhammad Mahdi Karim · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/brown-bear.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.brown-bear">Brown bear</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kamchatka_Brown_Bear_near_Dvuhyurtochnoe_on_2015-07-23.jpg">Kamchatka Brown Bear near Dvuhyurtochnoe on 2015-07-23</a><span title="© Robert F. Tobler">© Robert F. Tobler · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/polar-bear.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.polar-bear">Polar bear</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Polar_Bear_-_Alaska_(cropped).jpg">Polar Bear - Alaska (cropped)</a><span title="© Alan Wilson">© Alan Wilson · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/giant-panda.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.giant-panda">Giant panda</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Giant_Panda_2004-03-2.jpg">Giant Panda 2004-03-2</a><span title="© Jeff Kubina">© Jeff Kubina · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/red-kangaroo.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.red-kangaroo">Kangaroo</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Red_kangaroo_-_melbourne_zoo.jpg">Red kangaroo - melbourne zoo</a><span title="© fir0002 flagstaffotos [at] gmail.com Canon 20D + Canon 70-200mm f/2.8 L">© fir0002 flagstaffotos [at] gmail.com Canon 20D + Canon 70-200mm f/2.8 L · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/koala.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.koala">Koala</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Koala_climbing_tree.jpg">Koala climbing tree</a><span title="© Diliff">© Diliff · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/chimpanzee.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.chimpanzee">Chimpanzee</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:013_Alpha_male_chimpanzee_at_Kibale_forest_National_Park_Photo_by_Giles_Laurent.jpg">013 Alpha male chimpanzee at Kibale forest National Park Photo by Giles Laurent</a><span title="© Giles Laurent">© Giles Laurent · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/gorilla.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.gorilla">Gorilla</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Lowland_Gorilla_(8973697544).jpg">Lowland Gorilla (8973697544)</a><span title="© Rennett Stowe from USA">© Rennett Stowe from USA · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/wolf.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.wolf">Wolf</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Eurasian_wolf_2.jpg">Eurasian wolf 2</a><span title="© User:Mas3cf">© User:Mas3cf · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/red-fox.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.red-fox">Fox</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Red_fox_(Vulpes_vulpes_crucigera)_Skalnate_Pleso_2.jpg">Red fox (Vulpes vulpes crucigera) Skalnate Pleso 2</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/red-deer.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.red-deer">Deer</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cervus_elaphus_Luc_Viatour_6.jpg">Cervus elaphus Luc Viatour 6</a><span title="© Lviatour">© Lviatour · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/european-rabbit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.european-rabbit">Rabbit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Oryctolagus_cuniculus_Tasmania_2_(cropped).jpg">Oryctolagus cuniculus Tasmania 2 (cropped)</a><span title="© JJ Harrison">© JJ Harrison · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/red-squirrel.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.red-squirrel">Squirrel</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Squirrel_posing.jpg">Squirrel posing</a><span title="© Peter Trimming">© Peter Trimming · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/european-hedgehog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.european-hedgehog">Hedgehog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Erinaceus_europaeus_(Linnaeus,_1758).jpg">Erinaceus europaeus (Linnaeus, 1758)</a><span title="© Michael Gäbler">© Michael Gäbler · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/megabat.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.megabat">Fruit bat</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pteropus_conspicillatus.jpg">Pteropus conspicillatus</a><span title="© Mnolf">© Mnolf · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/common-bottlenose-dolphin.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.common-bottlenose-dolphin">Dolphin</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tursiops_truncatus_01-cropped.jpg">Tursiops truncatus 01-cropped</a><span title="© NASA">© NASA · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/humpback-whale.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.humpback-whale">Humpback whale</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Humpback_whales_in_singing_position.jpg">Humpback whales in singing position</a><span title="© Dr. Louis M. Herman.">© Dr. Louis M. Herman. · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/hippopotamus.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.hippopotamus">Hippopotamus</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Portrait_Hippopotamus_in_the_water.jpg">Portrait Hippopotamus in the water</a><span title="© Muhammad Mahdi Karim">© Muhammad Mahdi Karim · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/white-rhinoceros.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.white-rhinoceros">Rhinoceros</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:White_rhinoceros_africa.jpg">White rhinoceros africa</a><span title="© Payamfarahani">© Payamfarahani · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/dromedary.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.dromedary">Camel</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Camelcalf-feeding.jpg">Camelcalf-feeding</a><span title="© Garrondo">© Garrondo · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/cheetah.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.cheetah">Cheetah</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:TheCheethcat.jpg">TheCheethcat</a><span title="© James Temple">© James Temple · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/leopard.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.leopard">Leopard</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Male_leopard_-_Mara.jpg">Male leopard - Mara</a><span title="© Sumeet Moghe">© Sumeet Moghe · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/sea-otter.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.sea-otter">Sea otter</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sea_otter_cropped.jpg">Sea otter cropped</a><span title="© Mike Baird from Morro Bay, USA">© Mike Baird from Morro Bay, USA · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/raccoon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.raccoon">Raccoon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Raccoon_in_Central_Park_(35264).jpg">Raccoon in Central Park (35264)</a><span title="© Rhododendrites">© Rhododendrites · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/sloth.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.sloth">Sloth</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bradypus.jpg">Bradypus</a><span title="© Stefan Laube (Tauchgurke)">© Stefan Laube (Tauchgurke) · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/moose.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.moose">Moose</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Elk-telemark.jpg">Elk-telemark</a><span title="© Badzil">© Badzil · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/orangutan.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.orangutan">Orangutan</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bornean,_Sumatran_%26_Tapanuli_orangs_(horizontal).jpg">Bornean, Sumatran &amp; Tapanuli orangs (horizontal)</a><span title="© Eric KilbyAiwokTim Laman">© Eric KilbyAiwokTim Laman · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/meerkat.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.meerkat">Meerkat</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Meerkat_(Suricata_suricatta).jpg">Meerkat (Suricata suricatta)</a><span title="© Hans Hillewaert">© Hans Hillewaert · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/snow-leopard.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.snow-leopard">Snow leopard</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Uncia_uncia.jpg">Uncia uncia</a><span title="© Bernard Landgraf">© Bernard Landgraf · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/mammals/platypus.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="mammals.platypus">Platypus</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Duck-billed_platypus_(Ornithorhynchus_anatinus)_Scottsdale.jpg">Duck-billed platypus (Ornithorhynchus anatinus) Scottsdale</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/bald-eagle.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.bald-eagle">Eagle</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bald_Eagle_(Haliaeetus_leucocephalus)_Kachemak_Bay,_Alaska.jpg">Bald Eagle (Haliaeetus leucocephalus) Kachemak Bay, Alaska</a><span title="© Andy Morffew from Itchen Abbas, Hampshire, UK">© Andy Morffew from Itchen Abbas, Hampshire, UK · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/barn-owl.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.barn-owl">Barn owl</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:American_Barn_Owl_(Tyto_furcata_guatemalae),_Orange_Walk.jpg">American Barn Owl (Tyto furcata guatemalae), Orange Walk</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/scarlet-macaw.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.scarlet-macaw">Macaw</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Scarlet_macaw_(Ara_macao_cyanopterus)_Copan.jpg">Scarlet macaw (Ara macao cyanopterus) Copan</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/emperor-penguin.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.emperor-penguin">Penguin</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg">Aptenodytes forsteri -Snow Hill Island, Antarctica -adults and juvenile-8</a><span title="© Ian Duffy from UK">© Ian Duffy from UK · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/american-flamingo.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.american-flamingo">Flamingo</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Phoenicopterus_ruber_Bonaire_1.jpg">Phoenicopterus ruber Bonaire 1</a><span title="© Paul Asman and Jill Lenoble">© Paul Asman and Jill Lenoble · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/indian-peafowl.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.indian-peafowl">Peacock</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Indian_Peacock_in_Tholpetty_Wildlife_Sanctuary_01.JPG">Indian Peacock in Tholpetty Wildlife Sanctuary 01</a><span title="© Praveenp">© Praveenp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/common-ostrich.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.common-ostrich">Ostrich</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:North_African_Ostrich_-_Masai_Ostrich_(Struthio_camelus_massaicus)_-_Flickr_-_Lip_Kee.jpg">North African Ostrich - Masai Ostrich (Struthio camelus massaicus) - Flickr - Lip Kee</a><span title="© Lip Kee from Singapore, Republic of Singapore">© Lip Kee from Singapore, Republic of Singapore · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/ruby-throated-hummingbird.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.ruby-throated-hummingbird">Hummingbird</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Male_Ruby-Throated_Hummingbird_Hovering.jpg">Male Ruby-Throated Hummingbird Hovering</a><span title="© Pslawinski">© Pslawinski · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/toco-toucan.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.toco-toucan">Toucan</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:006_Toco_toucan_in_Encontro_das_%C3%81guas_State_Park_Photo_by_Giles_Laurent.jpg">006 Toco toucan in Encontro das Águas State Park Photo by Giles Laurent</a><span title="© Giles Laurent">© Giles Laurent · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/mute-swan.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.mute-swan">Swan</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mute_Swan_Emsworth2.JPG">Mute Swan Emsworth2</a><span title="© Geni">© Geni · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/brown-pelican.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.brown-pelican">Pelican</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Brown_Pelican21K.jpg">Brown Pelican21K</a><span title="© Terry Foote">© Terry Foote · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/common-kingfisher.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.common-kingfisher">Kingfisher</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Alcedo_Atthis.jpg">Alcedo Atthis</a><span title="© Artemy Voikhansky">© Artemy Voikhansky · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/european-robin.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.european-robin">Robin</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Erithacus_rubecula_with_cocked_head.jpg">Erithacus rubecula with cocked head</a><span title="© Francis C. Franklin">© Francis C. Franklin · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/house-sparrow.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.house-sparrow">Sparrow</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:House_sparrow_male_in_Prospect_Park_(53532).jpg">House sparrow male in Prospect Park (53532)</a><span title="© Rhododendrites">© Rhododendrites · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/rock-dove.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.rock-dove">Pigeon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Columba_livia_(Rock_Dove,_wild),_Duncansby_Head,_Caithness,_Scotland_1.jpg">Columba livia (Rock Dove, wild), Duncansby Head, Caithness, Scotland 1</a><span title="© william_stephens">© william_stephens · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/common-raven.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.common-raven">Raven</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Corvus_corax_ad_berlin_090516.jpg">Corvus corax ad berlin 090516</a><span title="© Accipiter (R. Altenkamp, Berlin)">© Accipiter (R. Altenkamp, Berlin) · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/great-spotted-woodpecker.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.great-spotted-woodpecker">Woodpecker</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Dendrocopos_major_EM1B2679_(35219263071).jpg">Dendrocopos major EM1B2679 (35219263071)</a><span title="© Bengt Nyman from Vaxholm, Sweden">© Bengt Nyman from Vaxholm, Sweden · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/european-herring-gull.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.european-herring-gull">Seagull</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:European_herring_gull_vocalizing_(00170).jpg">European herring gull vocalizing (00170)</a><span title="© Rhododendrites">© Rhododendrites · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/white-stork.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.white-stork">Stork</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ciconia_ciconia.jpg">Ciconia ciconia</a><span title="© Krzysztof Kin">© Krzysztof Kin · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/atlantic-puffin.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.atlantic-puffin">Puffin</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Puffin_(Fratercula_arctica).jpg">Puffin (Fratercula arctica)</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/great-hornbill.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.great-hornbill">Hornbill</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Great_hornbill_Photograph_by_Shantanu_Kuveskar.jpg">Great hornbill Photograph by Shantanu Kuveskar</a><span title="© Shantanu Kuveskar">© Shantanu Kuveskar · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/kiwi.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.kiwi">Kiwi</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:TeTuatahianui.jpg">TeTuatahianui</a><span title="© Maungatautari Ecological Island Trust">© Maungatautari Ecological Island Trust · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/grey-heron.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.grey-heron">Heron</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ardea_cinerea_EM1A2714_(27349354381).jpg">Ardea cinerea EM1A2714 (27349354381)</a><span title="© Bengt Nyman from Vaxholm, Sweden">© Bengt Nyman from Vaxholm, Sweden · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/northern-cardinal.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.northern-cardinal">Cardinal</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cardinal_couple_-_Feb._2018_(watermark_removed).jpg">Cardinal couple - Feb. 2018 (watermark removed)</a><span title="© patricia pierce">© patricia pierce · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/blue-jay.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.blue-jay">Blue jay</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Blue_jay_in_PP_(30960).jpg">Blue jay in PP (30960)</a><span title="© Rhododendrites">© Rhododendrites · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/secretarybird.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.secretarybird">Secretary bird</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Secretario_(Sagittarius_serpentarius),_parque_nacional_de_Amboseli,_Kenia,_2024-05-23,_DD_13.jpg">Secretario (Sagittarius serpentarius), parque nacional de Amboseli, Kenia, 2024-05-23, DD 13</a><span title="© Diego Delso">© Diego Delso · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/birds/snowy-owl.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="birds.snowy-owl">Snowy owl</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_male_Muskegon.jpg">Bubo scandiacus male Muskegon</a><span title="© Bill Bouton from San Luis Obispo, CA, USA">© Bill Bouton from San Luis Obispo, CA, USA · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/cattle.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.cattle">Cow</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cow_female_black_white.jpg">Cow female black white</a><span title="© Keith Weller/USDA">© Keith Weller/USDA · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-pig.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-pig">Pig</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sow_with_piglet.jpg">Sow with piglet</a><span title="© Scott Bauer, USDA">© Scott Bauer, USDA · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/sheep.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.sheep">Sheep</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Flock_of_sheep.jpg">Flock of sheep</a><span title="© Keith Weller">© Keith Weller · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/goat.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.goat">Goat</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Billy_goat.jpg">Billy goat</a><span title="© User:Fir0002">© User:Fir0002 · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/horse.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.horse">Horse</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Biandintz_eta_zaldiak_-_modified2.jpg">Biandintz eta zaldiak - modified2</a><span title="© Mikel Ortega from Errenteria, Basque Country, Spain, with a retouche by Richard Bartz. See the original file here.">© Mikel Ortega from Errenteria, Basque Country, Spain, with a retouche by Richard Bartz. See the original file here. · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/donkey.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.donkey">Donkey</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Donkey_in_Clovelly,_North_Devon,_England.jpg">Donkey in Clovelly, North Devon, England</a><span title="© Adrian Pingstone">© Adrian Pingstone · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/chicken.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.chicken">Chicken</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kruppert_Cubalaya_cropped.JPG">Kruppert Cubalaya cropped</a><span title="© Kruppert_Cubalaya.JPG: Kruppert">© Kruppert_Cubalaya.JPG: Kruppert · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-duck.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-duck">Duck</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Witte_kwaker.jpg">Witte kwaker</a><span title="© Harriemanders">© Harriemanders · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-goose.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-goose">Goose</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Domestic_Goose.jpg">Domestic Goose</a><span title="© JJ Harrison">© JJ Harrison · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-turkey.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-turkey">Turkey</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Male_north_american_turkey_supersaturated.jpg">Male north american turkey supersaturated</a><span title="© photo taken by Lupin on en:Wikipedia">© photo taken by Lupin on en:Wikipedia · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-rabbit.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-rabbit">Rabbit</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:EnglishSpotRabbitChocolate1(cropped).jpg">EnglishSpotRabbitChocolate1(cropped)</a><span title="© Kat Chzhen">© Kat Chzhen · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/llama.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.llama">Llama</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:18-08-25-%C3%85land_RRK6596a.jpg">18-08-25-Åland RRK6596a</a><span title="© Ralf Roletschek">© Ralf Roletschek · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/alpaca.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.alpaca">Alpaca</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Alpacas.JPG">Alpacas</a><span title="© Philippe Lavoie">© Philippe Lavoie · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/water-buffalo.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.water-buffalo">Water buffalo</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Wasserb%C3%BCffel_(25787818312).jpg">Wasserbüffel (25787818312)</a><span title="© Eleleleven from Bielefeld, Deutschland">© Eleleleven from Bielefeld, Deutschland · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/domestic-yak.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.domestic-yak">Yak</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bos_grunniens_at_Letdar_on_Annapurna_Circuit.jpg">Bos grunniens at Letdar on Annapurna Circuit</a><span title="© travelwayoflife">© travelwayoflife · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/guinea-pig.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.guinea-pig">Guinea pig</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Conill_porqu%C3%AD_g%C3%A0bia.JPG">Conill porquí gàbia</a><span title="© User:Laurita">© User:Laurita · <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/farmAnimals/mule.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="farmAnimals.mule">Mule</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Juancito.jpg">Juancito</a><span title="© w:User:Dario u / User:Dario urruty">© w:User:Dario u / User:Dario urruty · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/saltwater-crocodile.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.saltwater-crocodile">Crocodile</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Laurie%27s_crocodile_in_the_garden.jpg">Laurie's crocodile in the garden</a><span title="© Laubarr">© Laubarr · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/american-alligator.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.american-alligator">Alligator</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:American_Alligator.jpg">American Alligator</a><span title="© User:Postdlf">© User:Postdlf · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/green-sea-turtle.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.green-sea-turtle">Sea turtle</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Green_sea_turtle_(Chelonia_mydas)_Moorea.jpg">Green sea turtle (Chelonia mydas) Moorea</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/galapagos-tortoise.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.galapagos-tortoise">Giant tortoise</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Galapagos_Geochelone_nigra_porteri.jpg">Galapagos Geochelone nigra porteri</a><span title="© The original uploader was Pandanus at German Wikipedia.">© The original uploader was Pandanus at German Wikipedia. · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/panther-chameleon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.panther-chameleon">Chameleon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Panther_chameleon_(Furcifer_pardalis)_male_Nosy_Be.jpg">Panther chameleon (Furcifer pardalis) male Nosy Be</a><span title="© Charles J. Sharp">© Charles J. Sharp · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/green-iguana.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.green-iguana">Iguana</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Iguana_V.jpg">Iguana V</a><span title="© Rjcastillo">© Rjcastillo · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/tokay-gecko.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.tokay-gecko">Gecko</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tokay.jpg">Tokay</a><span title="© Nick Hobgood">© Nick Hobgood · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/komodo-dragon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.komodo-dragon">Komodo dragon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Komodo_dragon_Varanus_komodoensis_Ragunan_Zoo_2.JPG">Komodo dragon Varanus komodoensis Ragunan Zoo 2</a><span title="© Midori">© Midori · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/king-cobra.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.king-cobra">King cobra</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ophiophagus_hannah_381373252.jpg">Ophiophagus hannah 381373252</a><span title="© Max Tibby">© Max Tibby · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/ball-python.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.ball-python">Python</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ball_python_lucy.JPG">Ball python lucy</a><span title="© HCA (talk)">© HCA (talk) · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/western-diamondback-rattlesnake.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.western-diamondback-rattlesnake">Rattlesnake</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Crotalus_atrox_USFWS.jpg">Crotalus atrox USFWS</a><span title="© Gary Stolz (original)">© Gary Stolz (original) · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/frilled-lizard.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.frilled-lizard">Frilled lizard</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Chlamydosaurus_kingii.jpg">Chlamydosaurus kingii</a><span title="© Miklos Schiberna">© Miklos Schiberna · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/gila-monster.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.gila-monster">Gila monster</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:AZ_Gila_Monster_01.jpg">AZ Gila Monster 01</a><span title="© Josh Olander">© Josh Olander · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/tuatara.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.tuatara">Tuatara</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tuatara_adult.jpg">Tuatara adult</a><span title="© Unknown">© Unknown · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/gharial.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.gharial">Gharial</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Gharial_san_diego.jpg">Gharial san diego</a><span title="© Bo Link from Knoxville, TN, USA">© Bo Link from Knoxville, TN, USA · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/central-bearded-dragon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.central-bearded-dragon">Bearded dragon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Australian_Bearded_Dragon.jpg">Australian Bearded Dragon</a><span title="© Toni Segers">© Toni Segers · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/thorny-devil.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.thorny-devil">Thorny devil</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Thornydevil02.jpg">Thornydevil02</a><span title="© User:Bäras">© User:Bäras · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/green-anaconda.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.green-anaconda">Anaconda</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Anaconda_com%C3%BAn_(Eunectes_murinus),_Tierpark_Hellabrunn,_M%C3%BAnich,_Alemania,_2012-06-17,_DD_01.JPG">Anaconda común (Eunectes murinus), Tierpark Hellabrunn, Múnich, Alemania, 2012-06-17, DD 01</a><span title="© Diego Delso">© Diego Delso · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/marine-iguana.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.marine-iguana">Marine iguana</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Iguanamarina.jpg">Iguanamarina</a><span title="© Unknown">© Unknown · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/reptiles/common-box-turtle.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="reptiles.common-box-turtle">Box turtle</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Box-turtle-cove-mtn-trail-tn1.jpg">Box-turtle-cove-mtn-trail-tn1</a><span title="© Brian Stansberry">© Brian Stansberry · <a href="https://creativecommons.org/licenses/by/3.0">CC BY 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/ocellaris-clownfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.ocellaris-clownfish">Clownfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Clownfisch_(Amphiprion_ocellaris).jpg">Clownfisch (Amphiprion ocellaris)</a><span title="© Raimond Spekking">© Raimond Spekking · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/goldfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.goldfish">Goldfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Goldfish3.jpg">Goldfish3</a><span title="© No machine-readable author provided. Heptagon assumed (based on copyright claims).">© No machine-readable author provided. Heptagon assumed (based on copyright claims). · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/great-white-shark.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.great-white-shark">Great white shark</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Carcharodon_carcharias.jpg">Carcharodon carcharias</a><span title="© Sharkdiver.com">© Sharkdiver.com · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/atlantic-salmon.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.atlantic-salmon">Salmon</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Atlantischer_Lachs.jpg">Atlantischer Lachs</a><span title="© Hartley, William W.">© Hartley, William W. · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/atlantic-bluefin-tuna.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.atlantic-bluefin-tuna">Tuna</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bluefin-big.jpg">Bluefin-big</a><span title="© Unknown authorUnknown author">© Unknown authorUnknown author · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/seahorse.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.seahorse">Seahorse</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Hippocampus_hippocampus_(on_Ascophyllum_nodosum).jpg">Hippocampus hippocampus (on Ascophyllum nodosum)</a><span title="© Hans Hillewaert">© Hans Hillewaert · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/tetraodontidae.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.tetraodontidae">Pufferfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Canthigaster_callisterna_(Clown_toado).jpg">Canthigaster callisterna (Clown toado)</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/pterophyllum.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.pterophyllum">Angelfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Freshwater_angelfish_biodome.jpg">Freshwater angelfish biodome</a><span title="© mendel">© mendel · <a href="https://creativecommons.org/licenses/by-sa/1.0">CC BY-SA 1.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/swordfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.swordfish">Swordfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Swordfish-Xiphias_gladius.png">Swordfish-Xiphias gladius</a><span title="© NOAA Photo Library">© NOAA Photo Library · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/common-carp.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.common-carp">Carp</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cyprinus_carpio.jpeg">Cyprinus carpio</a><span title="© Dezidor">© Dezidor · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/rainbow-trout.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.rainbow-trout">Trout</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Trout.jpg">Trout</a><span title="© Jonathunder">© Jonathunder · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/giant-oceanic-manta-ray.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.giant-oceanic-manta-ray">Manta ray</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Manta_birostris-Thailand3.jpg">Manta birostris-Thailand3</a><span title="© jon hanson from london, UK">© jon hanson from london, UK · <a href="https://creativecommons.org/licenses/by-sa/2.0">CC BY-SA 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/red-bellied-piranha.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.red-bellied-piranha">Piranha</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pygocentrus_nattereri_Natural_History_Museum_University_of_Pisa.jpg">Pygocentrus nattereri Natural History Museum University of Pisa</a><span title="© Mattia Nocciola">© Mattia Nocciola · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/atlantic-cod.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.atlantic-cod">Cod</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Atlantic_cod.jpg">Atlantic cod</a><span title="© Unknown">© Unknown · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/european-pilchard.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.european-pilchard">Sardine</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sardina_pilchardus_Italy.jpg">Sardina pilchardus Italy</a><span title="© margherita_bg">© margherita_bg · <a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/siamese-fighting-fish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.siamese-fighting-fish">Betta fish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bojownik_syjamski.jpg">Bojownik syjamski</a><span title="© Henryk Niestrój">© Henryk Niestrój · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/mandarinfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.mandarinfish">Mandarinfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Synchiropus_splendidus_2_Luc_Viatour.jpg">Synchiropus splendidus 2 Luc Viatour</a><span title="© Luc Viatour">© Luc Viatour · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/red-lionfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.red-lionfish">Lionfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Pterois_volitans_Manado-e_edit.jpg">Pterois volitans Manado-e edit</a><span title="© Photo by Jens Petersen, Edited by User:Olegiwit (cloned in part of fins) and Fir0002 (removed spots and noise)">© Photo by Jens Petersen, Edited by User:Olegiwit (cloned in part of fins) and Fir0002 (removed spots and noise) · <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/ocean-sunfish.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.ocean-sunfish">Sunfish</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mola_mola.jpg">Mola mola</a><span title="© U.S. National Oceanic and Atmospheric Administration">© U.S. National Oceanic and Atmospheric Administration · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/great-hammerhead.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.great-hammerhead">Hammerhead shark</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Sphyrna_mokarran_at_georgia.jpg">Sphyrna mokarran at georgia</a><span title="© Josh Hallett from Winter Haven, FL, USA">© Josh Hallett from Winter Haven, FL, USA · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/whale-shark.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.whale-shark">Whale shark</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Whale_shark_Georgia_aquarium.jpg">Whale shark Georgia aquarium</a><span title="© User:Zac Wolf (original), en:User:Stefan (cropping)">© User:Zac Wolf (original), en:User:Stefan (cropping) · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/moorish-idol.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.moorish-idol">Moorish idol</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:%C3%8Ddolo_moro_(Zanclus_cornutus),_Los_Cabos,_Baja_California,_M%C3%A9xico,_2024-12-17,_DD_54.jpg">Ídolo moro (Zanclus cornutus), Los Cabos, Baja California, México, 2024-12-17, DD 54</a><span title="© Diego Delso">© Diego Delso · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/paracanthurus.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.paracanthurus">Blue tang</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Blue_tang_(Paracanthurus_hepatus)_02.jpg">Blue tang (Paracanthurus hepatus) 02</a><span title="© Tewy">© Tewy · <a href="https://creativecommons.org/licenses/by/2.5">CC BY 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/fish/koi.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="fish.koi">Koi</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ojiya_Nishikigoi_no_Sato_ac_(3).jpg">Ojiya Nishikigoi no Sato ac (3)</a><span title="© Asturio Cantabrio">© Asturio Cantabrio · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/common-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.common-frog">Frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:European_Common_Frog_Rana_temporaria.jpg">European Common Frog Rana temporaria</a><span title="© Richard Bartz, Munich aka Makro Freak Image:MFB.jpg">© Richard Bartz, Munich aka Makro Freak Image:MFB.jpg · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/common-toad.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.common-toad">Toad</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Bufo_bufo_2_(2005_07_11).jpg">Bufo bufo 2 (2005 07 11)</a><span title="© Taka">© Taka · <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/agalychnis-callidryas.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.agalychnis-callidryas">Red-eyed tree frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Red_eyed_tree_frog_edit2.jpg">Red eyed tree frog edit2</a><span title="© Careyjamesbalboa (Carey James Balboa)">© Careyjamesbalboa (Carey James Balboa) · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/strawberry-poison-dart-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.strawberry-poison-dart-frog">Poison dart frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Strawberry_poison_dart_frog_(70539).jpg">Strawberry poison dart frog (70539)</a><span title="© Rhododendrites">© Rhododendrites · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/axolotl.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.axolotl">Axolotl</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Ambystoma_mexicanum_Natural_History_Museum_University_of_Pisa_(cropped).jpg">Ambystoma mexicanum Natural History Museum University of Pisa (cropped)</a><span title="© Mattia Nocciola">© Mattia Nocciola · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/fire-salamander.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.fire-salamander">Fire salamander</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:%D0%A1%D0%B0%D0%BB%D0%B0%D0%BC%D0%B0%D0%BD%D0%B4%D1%80%D0%B0.JPG">Саламандра</a><span title="© LorikNov">© LorikNov · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/northern-crested-newt.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.northern-crested-newt">Crested newt</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Kammmolchmaennchen.jpg">Kammmolchmaennchen</a><span title="© Rainer Theuer.">© Rainer Theuer. · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/american-bullfrog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.american-bullfrog">Bullfrog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:North-American-bullfrog1.jpg">North-American-bullfrog1</a><span title="© Carl D. Howe">© Carl D. Howe · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/glass-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.glass-frog">Glass frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Cochranella_susatamai03.jpg">Cochranella susatamai03</a><span title="© Mauricio Rivera Correa">© Mauricio Rivera Correa · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/dyscophus-antongilii.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.dyscophus-antongilii">Tomato frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Dyscophus_antongilii02.jpg">Dyscophus antongilii02</a><span title="© Franco Andreone - [:it:Wikipedia:Autorizzazioni_ottenute/Franco_Andreone see authorization]">© Franco Andreone - [:it:Wikipedia:Autorizzazioni_ottenute/Franco_Andreone see authorization] · <a href="https://creativecommons.org/licenses/by-sa/2.5">CC BY-SA 2.5</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/ceratophrys-ornata.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.ceratophrys-ornata">Horned frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Mr_Wiggles_7-20-07_(870844637).jpg">Mr Wiggles 7-20-07 (870844637)</a><span title="© Melanie Mae Bryan from Greensboro, NC, USA">© Melanie Mae Bryan from Greensboro, NC, USA · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/olm.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.olm">Olm</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Proteus_anguinus_Postojnska_Jama_Slovenija.jpg">Proteus anguinus Postojnska Jama Slovenija</a><span title="© Boštjan Burger">© Boštjan Burger · Public domain</span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/japanese-giant-salamander.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.japanese-giant-salamander">Giant salamander</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Japanese_giant_salamander_in_Tottori_Prefecture,_Japan.jpg">Japanese giant salamander in Tottori Prefecture, Japan</a><span title="© Salamandra2021">© Salamandra2021 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/cane-toad.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.cane-toad">Cane toad</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Canetoadmale.jpg">Canetoadmale</a><span title="© Benjamint444">© Benjamint444 · <a href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.html">GFDL 1.2</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/smooth-newt.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.smooth-newt">Newt</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Triturus_vulgaris_maennchen_cropped.jpg">Triturus vulgaris maennchen cropped</a><span title="© Kristian Peters">© Kristian Peters · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/tiger-salamander.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.tiger-salamander">Tiger salamander</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Tigersalamander_(Ambystoma_tigrinum),_Seitenansicht_1.jpg">Tigersalamander (Ambystoma tigrinum), Seitenansicht 1</a><span title="© Peter Paplanus">© Peter Paplanus · <a href="https://creativecommons.org/licenses/by/2.0">CC BY 2.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/wallace-s-flying-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.wallace-s-flying-frog">Flying frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Rhacophorus_nigropalmatus_227261158.jpg">Rhacophorus nigropalmatus 227261158</a><span title="© Tim">© Tim · <a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/golden-poison-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.golden-poison-frog">Golden poison frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Schrecklicherpfeilgiftfrosch-01.jpg">Schrecklicherpfeilgiftfrosch-01</a><span title="© Wilfried Berns">© Wilfried Berns · <a href="https://creativecommons.org/licenses/by-sa/2.0/de/deed.en">CC BY-SA 2.0 de</a></span></p>
+    </article>
+    <article class="card small">
+      <img class="combined" src="cards/amphibians/european-tree-frog.webp" alt="" loading="lazy" width="320" height="320" />
+      <h3 data-card="amphibians.european-tree-frog">Tree frog</h3>
+      <p class="photos"><a href="https://commons.wikimedia.org/wiki/File:Hyla_arborea,_juv_2.jpg">Hyla arborea, juv 2</a><span title="© Christian Fischer">© Christian Fischer · <a href="https://creativecommons.org/licenses/by-sa/3.0">CC BY-SA 3.0</a></span></p>
+    </article>
+  </div>
 
   <h2 data-i18n="credits.photos">Photos of capitals</h2>
   <p class="note" data-i18n="credits.photosNote">All photos are from <a href="https://commons.wikimedia.org/">Wikimedia Commons</a>, resized and cropped. Follow the links for the originals and the full licence terms.</p>
@@ -2313,6 +3567,10 @@
           });
           document.querySelectorAll('[data-capital]').forEach(function (el) {
             var n = d.capitals[el.getAttribute('data-capital')];
+            if (n) el.textContent = n;
+          });
+          document.querySelectorAll('[data-card]').forEach(function (el) {
+            var n = d.cards && d.cards[el.getAttribute('data-card')];
             if (n) el.textContent = n;
           });
           document.querySelectorAll('[data-country]').forEach(function (el) {
