@@ -1,0 +1,187 @@
+{
+  "pattern": "{color} {shape}",
+  "colors": {
+    "red": {
+      "m": "crveni",
+      "f": "crvena",
+      "n": "crveno"
+    },
+    "orange": {
+      "m": "narančasti",
+      "f": "narančasta",
+      "n": "narančasto"
+    },
+    "yellow": {
+      "m": "žuti",
+      "f": "žuta",
+      "n": "žuto"
+    },
+    "green": {
+      "m": "zeleni",
+      "f": "zelena",
+      "n": "zeleno"
+    },
+    "blue": {
+      "m": "plavi",
+      "f": "plava",
+      "n": "plavo"
+    },
+    "indigo": {
+      "m": "tamnoplavi",
+      "f": "tamnoplava",
+      "n": "tamnoplavo"
+    },
+    "violet": {
+      "m": "ljubičasti",
+      "f": "ljubičasta",
+      "n": "ljubičasto"
+    },
+    "black": {
+      "m": "crni",
+      "f": "crna",
+      "n": "crno"
+    },
+    "grey": {
+      "m": "sivi",
+      "f": "siva",
+      "n": "sivo"
+    },
+    "white": {
+      "m": "bijeli",
+      "f": "bijela",
+      "n": "bijelo"
+    },
+    "brown": {
+      "m": "smeđi",
+      "f": "smeđa",
+      "n": "smeđe"
+    },
+    "pink": {
+      "m": "ružičasti",
+      "f": "ružičasta",
+      "n": "ružičasto"
+    }
+  },
+  "shapes": {
+    "circle": {
+      "name": "krug",
+      "g": "m"
+    },
+    "equilateralTriangle": {
+      "name": "jednakostranični trokut",
+      "g": "m"
+    },
+    "isoscelesTriangle": {
+      "name": "jednakokračni trokut",
+      "g": "m"
+    },
+    "scaleneTriangle": {
+      "name": "raznostranični trokut",
+      "g": "m"
+    },
+    "rightTriangle": {
+      "name": "pravokutni trokut",
+      "g": "m"
+    },
+    "square": {
+      "name": "kvadrat",
+      "g": "m"
+    },
+    "rectangle": {
+      "name": "pravokutnik",
+      "g": "m"
+    },
+    "rhombus": {
+      "name": "romb",
+      "g": "m"
+    },
+    "parallelogram": {
+      "name": "paralelogram",
+      "g": "m"
+    },
+    "trapezium": {
+      "name": "trapez",
+      "g": "m"
+    },
+    "pentagon": {
+      "name": "peterokut",
+      "g": "m"
+    },
+    "hexagon": {
+      "name": "šesterokut",
+      "g": "m"
+    },
+    "heptagon": {
+      "name": "sedmerokut",
+      "g": "m"
+    },
+    "octagon": {
+      "name": "osmerokut",
+      "g": "m"
+    },
+    "nonagon": {
+      "name": "deveterokut",
+      "g": "m"
+    },
+    "decagon": {
+      "name": "deseterokut",
+      "g": "m"
+    },
+    "star": {
+      "name": "zvijezda",
+      "g": "f"
+    },
+    "crescent": {
+      "name": "polumjesec",
+      "g": "m"
+    },
+    "cross": {
+      "name": "križ",
+      "g": "m"
+    },
+    "heart": {
+      "name": "srce",
+      "g": "n"
+    },
+    "ellipse": {
+      "name": "elipsa",
+      "g": "f"
+    },
+    "ring": {
+      "name": "prsten",
+      "g": "m"
+    },
+    "semicircle": {
+      "name": "polukrug",
+      "g": "m"
+    },
+    "dodecagon": {
+      "name": "dvanaesterokut",
+      "g": "m"
+    },
+    "pentadecagon": {
+      "name": "petnaesterokut",
+      "g": "m"
+    },
+    "icosagon": {
+      "name": "dvadeseterokut",
+      "g": "m"
+    },
+    "circleSector": {
+      "name": "kružni isječak",
+      "g": "m"
+    },
+    "lemniscate": {
+      "name": "lemniskata",
+      "g": "f"
+    },
+    "trefoil": {
+      "name": "trolist",
+      "g": "m"
+    },
+    "quatrefoil": {
+      "name": "četverolist",
+      "g": "m"
+    }
+  }
+}

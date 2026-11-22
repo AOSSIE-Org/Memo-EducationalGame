@@ -1,0 +1,14 @@
+{
+  "format": "memo-player",
+  "version": 1,
+  "exportedAt": "2026-11-22T10:00:00.000Z",
+  "player": {
+    "name": "Ana",
+    "avatar": { "shape": "heart", "color": "#F472B6" },
+    "theme": "light",
+    "scores": { "shapes": { "pairs": 14, "completed": 2 }, "capitals": { "pairs": 3, "completed": 0 } },
+    "correctCount": 17,
+    "createdAt": 1795300000000
+  },
+  "playDays": ["2026-11-21", "2026-11-22"]
+}

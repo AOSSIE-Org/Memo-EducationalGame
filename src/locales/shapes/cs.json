@@ -1,0 +1,187 @@
+{
+  "pattern": "{color} {shape}",
+  "colors": {
+    "red": {
+      "m": "červený",
+      "f": "červená",
+      "n": "červené"
+    },
+    "orange": {
+      "m": "oranžový",
+      "f": "oranžová",
+      "n": "oranžové"
+    },
+    "yellow": {
+      "m": "žlutý",
+      "f": "žlutá",
+      "n": "žluté"
+    },
+    "green": {
+      "m": "zelený",
+      "f": "zelená",
+      "n": "zelené"
+    },
+    "blue": {
+      "m": "modrý",
+      "f": "modrá",
+      "n": "modré"
+    },
+    "indigo": {
+      "m": "tmavomodrý",
+      "f": "tmavomodrá",
+      "n": "tmavomodré"
+    },
+    "violet": {
+      "m": "fialový",
+      "f": "fialová",
+      "n": "fialové"
+    },
+    "black": {
+      "m": "černý",
+      "f": "černá",
+      "n": "černé"
+    },
+    "grey": {
+      "m": "šedý",
+      "f": "šedá",
+      "n": "šedé"
+    },
+    "white": {
+      "m": "bílý",
+      "f": "bílá",
+      "n": "bílé"
+    },
+    "brown": {
+      "m": "hnědý",
+      "f": "hnědá",
+      "n": "hnědé"
+    },
+    "pink": {
+      "m": "růžový",
+      "f": "růžová",
+      "n": "růžové"
+    }
+  },
+  "shapes": {
+    "circle": {
+      "name": "kruh",
+      "g": "m"
+    },
+    "equilateralTriangle": {
+      "name": "rovnostranný trojúhelník",
+      "g": "m"
+    },
+    "isoscelesTriangle": {
+      "name": "rovnoramenný trojúhelník",
+      "g": "m"
+    },
+    "scaleneTriangle": {
+      "name": "různostranný trojúhelník",
+      "g": "m"
+    },
+    "rightTriangle": {
+      "name": "pravoúhlý trojúhelník",
+      "g": "m"
+    },
+    "square": {
+      "name": "čtverec",
+      "g": "m"
+    },
+    "rectangle": {
+      "name": "obdélník",
+      "g": "m"
+    },
+    "rhombus": {
+      "name": "kosočtverec",
+      "g": "m"
+    },
+    "parallelogram": {
+      "name": "kosodélník",
+      "g": "m"
+    },
+    "trapezium": {
+      "name": "lichoběžník",
+      "g": "m"
+    },
+    "pentagon": {
+      "name": "pětiúhelník",
+      "g": "m"
+    },
+    "hexagon": {
+      "name": "šestiúhelník",
+      "g": "m"
+    },
+    "heptagon": {
+      "name": "sedmiúhelník",
+      "g": "m"
+    },
+    "octagon": {
+      "name": "osmiúhelník",
+      "g": "m"
+    },
+    "nonagon": {
+      "name": "devítiúhelník",
+      "g": "m"
+    },
+    "decagon": {
+      "name": "desetiúhelník",
+      "g": "m"
+    },
+    "star": {
+      "name": "hvězda",
+      "g": "f"
+    },
+    "crescent": {
+      "name": "půlměsíc",
+      "g": "m"
+    },
+    "cross": {
+      "name": "kříž",
+      "g": "m"
+    },
+    "heart": {
+      "name": "srdce",
+      "g": "n"
+    },
+    "ellipse": {
+      "name": "elipsa",
+      "g": "f"
+    },
+    "ring": {
+      "name": "mezikruží",
+      "g": "n"
+    },
+    "semicircle": {
+      "name": "půlkruh",
+      "g": "m"
+    },
+    "dodecagon": {
+      "name": "dvanáctiúhelník",
+      "g": "m"
+    },
+    "pentadecagon": {
+      "name": "patnáctiúhelník",
+      "g": "m"
+    },
+    "icosagon": {
+      "name": "dvacetiúhelník",
+      "g": "m"
+    },
+    "circleSector": {
+      "name": "kruhová výseč",
+      "g": "f"
+    },
+    "lemniscate": {
+      "name": "lemniskáta",
+      "g": "f"
+    },
+    "trefoil": {
+      "name": "trojlístek",
+      "g": "m"
+    },
+    "quatrefoil": {
+      "name": "čtyřlístek",
+      "g": "m"
+    }
+  }
+}

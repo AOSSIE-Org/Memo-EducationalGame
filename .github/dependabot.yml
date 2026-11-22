@@ -1,0 +1,61 @@
+# Dependabot Configuration for Multi-Domain Projects
+# Documentation: https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+# ============================================================================
+# CUSTOMIZATION GUIDE
+# ============================================================================
+# 1. Remove package ecosystems not used in your project (e.g., if no Java, remove maven & gradle)
+# 2. Update "directory" if dependencies are in subdirectories (e.g., "/backend", "/frontend")
+# 3. Adjust "schedule" timing based on your team's workflow
+# 4. Set "open-pull-requests-limit" based on your review capacity (default: 5)
+# 5. Add reviewers/assignees if needed:
+#    reviewers:
+#      - "username"           # Individual GitHub user
+#      - "org/team-name"      # Organization team
+#    assignees:
+#      - "username"
+# 6. Customize labels to match your project's labeling system
+# 7. Use "ignore" to exclude specific dependencies or update types
+# 8. For monorepos, duplicate sections with different "directory" values
+# ============================================================================
+
+version: 2
+updates:
+  # NPM - JavaScript/Node.js projects
+  # Remove this section if your project doesn't use npm
+  - package-ecosystem: "npm"
+    directory: "/"  # Change to "/frontend" or "/backend" for monorepos
+    schedule:
+      interval: "weekly"  # Options: daily, weekly, monthly
+      day: "monday"       # For weekly: monday-sunday
+      time: "09:00"       # UTC time
+    open-pull-requests-limit: 5  # Max PRs to keep open
+    labels:
+      - "dependencies"
+      - "npm"
+    ignore:
+      # svelte-check (used by `npm run check`) does not support TypeScript 7 yet.
+      - dependency-name: "typescript"
+        update-types: ["version-update:semver-major"]
+    commit-message:
+      prefix: "chore(deps)"  # Follows conventional commits
+      include: "scope"
+    pull-request-branch-name:
+      separator: "-"  # Creates branches like: dependabot/npm-package-name
+
+  # GitHub Actions - Keep workflows up to date (recommended for all projects)
+  - package-ecosystem: "github-actions"
+    directory: "/"  # Scans .github/workflows/
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+    open-pull-requests-limit: 5
+    labels:
+      - "dependencies"
+      - "github-actions"
+    commit-message:
+      prefix: "chore(deps)"
+      include: "scope"
+    pull-request-branch-name:
+      separator: "-"

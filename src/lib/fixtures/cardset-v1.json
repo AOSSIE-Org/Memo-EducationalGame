@@ -1,0 +1,13 @@
+{
+  "format": "memo-card-set",
+  "version": 1,
+  "language": "en",
+  "name": { "en": "Fruits", "fr": "Fruits" },
+  "tags": [{ "en": "Food", "fr": "Nourriture" }],
+  "cards": [
+    { "image": "images/001.png", "description": { "en": "Apple", "fr": "Pomme" } },
+    { "image": "images/002.png", "description": { "en": "Pear" } },
+    { "image": "images/003.png", "description": "Plum" }
+  ],
+  "autoTranslated": ["fr"]
+}

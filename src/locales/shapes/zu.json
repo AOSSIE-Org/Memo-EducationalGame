@@ -1,0 +1,211 @@
+{
+  "pattern": "{shape} {color}",
+  "colors": {
+    "red": {
+      "1": "obomvu",
+      "7": "esibomvu",
+      "9": "ebomvu",
+      "11": "olubomvu",
+      "6": "abomvu"
+    },
+    "orange": {
+      "1": "owolintshi",
+      "7": "esiwolintshi",
+      "9": "ewolintshi",
+      "11": "oluwolintshi",
+      "6": "awolintshi"
+    },
+    "yellow": {
+      "1": "ophuzi",
+      "7": "esiphuzi",
+      "9": "ephuzi",
+      "11": "oluphuzi",
+      "6": "aphuzi"
+    },
+    "green": {
+      "1": "oluhlaza okotshani",
+      "7": "esiluhlaza okotshani",
+      "9": "eluhlaza okotshani",
+      "11": "oluluhlaza okotshani",
+      "6": "aluhlaza okotshani"
+    },
+    "blue": {
+      "1": "oluhlaza okwesibhakabhaka",
+      "7": "esiluhlaza okwesibhakabhaka",
+      "9": "eluhlaza okwesibhakabhaka",
+      "11": "oluluhlaza okwesibhakabhaka",
+      "6": "aluhlaza okwesibhakabhaka"
+    },
+    "indigo": {
+      "1": "oluhlaza okwesibhakabhaka okumnyama",
+      "7": "esiluhlaza okwesibhakabhaka okumnyama",
+      "9": "eluhlaza okwesibhakabhaka okumnyama",
+      "11": "oluluhlaza okwesibhakabhaka okumnyama",
+      "6": "aluhlaza okwesibhakabhaka okumnyama"
+    },
+    "violet": {
+      "1": "onsomi",
+      "7": "esinsomi",
+      "9": "ensomi",
+      "11": "olunsomi",
+      "6": "ansomi"
+    },
+    "black": {
+      "1": "omnyama",
+      "7": "esimnyama",
+      "9": "emnyama",
+      "11": "olumnyama",
+      "6": "amnyama"
+    },
+    "grey": {
+      "1": "ompunga",
+      "7": "esimpunga",
+      "9": "empunga",
+      "11": "olumpunga",
+      "6": "ampunga"
+    },
+    "white": {
+      "1": "omhlophe",
+      "7": "esimhlophe",
+      "9": "emhlophe",
+      "11": "olumhlophe",
+      "6": "amhlophe"
+    },
+    "brown": {
+      "1": "onsundu",
+      "7": "esinsundu",
+      "9": "ensundu",
+      "11": "olunsundu",
+      "6": "ansundu"
+    },
+    "pink": {
+      "1": "opinki",
+      "7": "esipinki",
+      "9": "epinki",
+      "11": "olupinki",
+      "6": "apinki"
+    }
+  },
+  "shapes": {
+    "circle": {
+      "name": "indilinga",
+      "g": "9"
+    },
+    "equilateralTriangle": {
+      "name": "unxantathu onezinhlangothi ezilinganayo",
+      "g": "1"
+    },
+    "isoscelesTriangle": {
+      "name": "unxantathu onezinhlangothi ezimbili ezilinganayo",
+      "g": "1"
+    },
+    "scaleneTriangle": {
+      "name": "unxantathu onezinhlangothi ezingalingani",
+      "g": "1"
+    },
+    "rightTriangle": {
+      "name": "unxantathu one-engeli engqondile",
+      "g": "1"
+    },
+    "square": {
+      "name": "isikwele",
+      "g": "7"
+    },
+    "rectangle": {
+      "name": "unxande",
+      "g": "1"
+    },
+    "rhombus": {
+      "name": "irombasi",
+      "g": "9"
+    },
+    "parallelogram": {
+      "name": "iphararelogremu",
+      "g": "9"
+    },
+    "trapezium": {
+      "name": "ithrapeziyamu",
+      "g": "9"
+    },
+    "pentagon": {
+      "name": "iphentagoni",
+      "g": "9"
+    },
+    "hexagon": {
+      "name": "iheksagoni",
+      "g": "9"
+    },
+    "heptagon": {
+      "name": "iheptagoni",
+      "g": "9"
+    },
+    "octagon": {
+      "name": "i-okthagoni",
+      "g": "9"
+    },
+    "nonagon": {
+      "name": "inonagoni",
+      "g": "9"
+    },
+    "decagon": {
+      "name": "idekagoni",
+      "g": "9"
+    },
+    "star": {
+      "name": "inkanyezi",
+      "g": "9"
+    },
+    "crescent": {
+      "name": "ucezu lwenyanga",
+      "g": "11"
+    },
+    "cross": {
+      "name": "isiphambano",
+      "g": "7"
+    },
+    "heart": {
+      "name": "inhliziyo",
+      "g": "9"
+    },
+    "ellipse": {
+      "name": "i-elipsi",
+      "g": "9"
+    },
+    "ring": {
+      "name": "indandatho",
+      "g": "9"
+    },
+    "semicircle": {
+      "name": "ingxenye yendilinga",
+      "g": "9"
+    },
+    "dodecagon": {
+      "name": "idodekagoni",
+      "g": "9"
+    },
+    "pentadecagon": {
+      "name": "iphentadekagoni",
+      "g": "9"
+    },
+    "icosagon": {
+      "name": "i-ikhosagoni",
+      "g": "9"
+    },
+    "circleSector": {
+      "name": "isiqephu sendilinga",
+      "g": "7"
+    },
+    "lemniscate": {
+      "name": "ilemniskheti",
+      "g": "9"
+    },
+    "trefoil": {
+      "name": "amaqabunga amathathu",
+      "g": "6"
+    },
+    "quatrefoil": {
+      "name": "amaqabunga amane",
+      "g": "6"
+    }
+  }
+}

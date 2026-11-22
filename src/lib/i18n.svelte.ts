@@ -1,0 +1,107 @@
+/**
+ * Internationalisation.
+ *
+ * - UI messages live in src/locales/<lang>.ts, keyed like src/locales/en.ts
+ *   (the source of truth); missing keys fall back to English.
+ * - Country and capital names live in src/locales/names/<lang>.json (from
+ *   Flag Quiz, which generates them from CLDR and Wikidata).
+ * - Names of shapes and colours, and how they combine into card descriptions,
+ *   live in src/locales/shapes/<lang>.json (see src/lib/shapeNames.ts).
+ * - Languages other than English are loaded on demand (and precached by the
+ *   service worker, so they work offline).
+ * - The document's `lang` and `dir` follow the language, so browsers pick the
+ *   right fonts, hyphenation and right-to-left layout; text-to-speech uses a
+ *   voice for the language.
+ */
+import { LANGUAGES, DEFAULT_LANGUAGE, type LanguageCode } from './languages';
+import { setSpeechLanguage } from './speech';
+import en, { type MessageKey, type Messages } from '../locales/en';
+import enNames from '../locales/names/en.json';
+import enShapes from '../locales/shapes/en.json';
+import { describeShape, shapeName as shapeNameIn, type ShapeGrammar } from './shapeNames';
+
+export type { MessageKey };
+export { LANGUAGES, DEFAULT_LANGUAGE, isLanguage, type Language, type LanguageCode } from './languages';
+
+export interface Names {
+  countries: Record<string, string>;
+  capitals: Record<string, string>;
+}
+
+const messageLoaders = import.meta.glob<{ default: Messages }>(['../locales/*.ts', '!../locales/en.ts']);
+const nameLoaders = import.meta.glob<{ default: Names }>(['../locales/names/*.json', '!../locales/names/en.json']);
+const shapeLoaders = import.meta.glob<{ default: ShapeGrammar }>(['../locales/shapes/*.json', '!../locales/shapes/en.json']);
+
+class I18n {
+  lang = $state<LanguageCode>(DEFAULT_LANGUAGE);
+  messages = $state.raw<Messages>(en);
+  names = $state.raw<Names>(enNames);
+  shapes = $state.raw<ShapeGrammar>(enShapes);
+  numbers = $derived(new Intl.NumberFormat(this.lang));
+  collator = $derived(new Intl.Collator(this.lang));
+}
+
+export const i18n = new I18n();
+
+/** Loads a language and makes it the current one. */
+export async function setLanguage(code: LanguageCode): Promise<void> {
+  const lang = LANGUAGES.find((l) => l.code === code) ?? LANGUAGES[0];
+  let messages: Messages = en;
+  let names: Names = enNames;
+  let shapes: ShapeGrammar = enShapes;
+  if (lang.code !== 'en') {
+    const [m, n, s] = await Promise.all([
+      messageLoaders[`../locales/${lang.code}.ts`]?.(),
+      nameLoaders[`../locales/names/${lang.code}.json`]?.(),
+      shapeLoaders[`../locales/shapes/${lang.code}.json`]?.(),
+    ]);
+    messages = { ...en, ...m?.default };
+    names = n?.default ?? enNames;
+    shapes = s?.default ?? enShapes;
+  }
+  i18n.messages = messages;
+  i18n.names = names;
+  i18n.shapes = shapes;
+  i18n.lang = lang.code;
+  setSpeechLanguage(lang.speech);
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = lang.code;
+    document.documentElement.dir = lang.dir;
+  }
+}
+
+/** Replaces {placeholders} in a message. */
+export function format(message: string, params?: Record<string, string | number>): string {
+  if (!params) return message;
+  return message.replace(/\{(\w+)\}/g, (match, key: string) =>
+    key in params ? String(typeof params[key] === 'number' ? num(params[key]) : params[key]) : match,
+  );
+}
+
+/** The message `key` in the current language. */
+export function t(key: MessageKey, params?: Record<string, string | number>): string {
+  return format(i18n.messages[key] ?? en[key], params);
+}
+
+/** A number written the way the current language writes numbers. */
+export function num(n: number): string {
+  return i18n.numbers.format(n);
+}
+
+export function countryName(code: string): string {
+  return i18n.names.countries[code] ?? enNames.countries[code as keyof typeof enNames.countries] ?? code;
+}
+
+export function capitalName(code: string): string {
+  return i18n.names.capitals[code] ?? enNames.capitals[code as keyof typeof enNames.capitals] ?? code;
+}
+
+/** A shape's name, e.g. "Circle". */
+export function shapeName(shape: string): string {
+  return shapeNameIn(i18n.shapes, shape, i18n.lang);
+}
+
+/** A coloured shape, e.g. "Red Circle". */
+export function coloredShapeName(color: string, shape: string): string {
+  return describeShape(i18n.shapes, color, shape, i18n.lang);
+}

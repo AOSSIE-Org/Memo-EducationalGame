@@ -1,0 +1,22 @@
+name: gitleaks
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 4 * * *" # run once a day at 4 AM
+jobs:
+  scan:
+    name: gitleaks
+    runs-on: ubuntu-latest
+    # gitleaks-action needs the GITLEAKS_LICENSE secret for organization repos.
+    # Runs triggered by Dependabot don't receive Actions secrets, so they are
+    # skipped; their changes are scanned again once merged into main.
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: gitleaks/gitleaks-action@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}

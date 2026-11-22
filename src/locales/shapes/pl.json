@@ -1,0 +1,187 @@
+{
+  "pattern": "{color} {shape}",
+  "colors": {
+    "red": {
+      "m": "czerwony",
+      "f": "czerwona",
+      "n": "czerwone"
+    },
+    "orange": {
+      "m": "pomarańczowy",
+      "f": "pomarańczowa",
+      "n": "pomarańczowe"
+    },
+    "yellow": {
+      "m": "żółty",
+      "f": "żółta",
+      "n": "żółte"
+    },
+    "green": {
+      "m": "zielony",
+      "f": "zielona",
+      "n": "zielone"
+    },
+    "blue": {
+      "m": "niebieski",
+      "f": "niebieska",
+      "n": "niebieskie"
+    },
+    "indigo": {
+      "m": "granatowy",
+      "f": "granatowa",
+      "n": "granatowe"
+    },
+    "violet": {
+      "m": "fioletowy",
+      "f": "fioletowa",
+      "n": "fioletowe"
+    },
+    "black": {
+      "m": "czarny",
+      "f": "czarna",
+      "n": "czarne"
+    },
+    "grey": {
+      "m": "szary",
+      "f": "szara",
+      "n": "szare"
+    },
+    "white": {
+      "m": "biały",
+      "f": "biała",
+      "n": "białe"
+    },
+    "brown": {
+      "m": "brązowy",
+      "f": "brązowa",
+      "n": "brązowe"
+    },
+    "pink": {
+      "m": "różowy",
+      "f": "różowa",
+      "n": "różowe"
+    }
+  },
+  "shapes": {
+    "circle": {
+      "name": "koło",
+      "g": "n"
+    },
+    "equilateralTriangle": {
+      "name": "trójkąt równoboczny",
+      "g": "m"
+    },
+    "isoscelesTriangle": {
+      "name": "trójkąt równoramienny",
+      "g": "m"
+    },
+    "scaleneTriangle": {
+      "name": "trójkąt różnoboczny",
+      "g": "m"
+    },
+    "rightTriangle": {
+      "name": "trójkąt prostokątny",
+      "g": "m"
+    },
+    "square": {
+      "name": "kwadrat",
+      "g": "m"
+    },
+    "rectangle": {
+      "name": "prostokąt",
+      "g": "m"
+    },
+    "rhombus": {
+      "name": "romb",
+      "g": "m"
+    },
+    "parallelogram": {
+      "name": "równoległobok",
+      "g": "m"
+    },
+    "trapezium": {
+      "name": "trapez",
+      "g": "m"
+    },
+    "pentagon": {
+      "name": "pięciokąt",
+      "g": "m"
+    },
+    "hexagon": {
+      "name": "sześciokąt",
+      "g": "m"
+    },
+    "heptagon": {
+      "name": "siedmiokąt",
+      "g": "m"
+    },
+    "octagon": {
+      "name": "ośmiokąt",
+      "g": "m"
+    },
+    "nonagon": {
+      "name": "dziewięciokąt",
+      "g": "m"
+    },
+    "decagon": {
+      "name": "dziesięciokąt",
+      "g": "m"
+    },
+    "star": {
+      "name": "gwiazda",
+      "g": "f"
+    },
+    "crescent": {
+      "name": "półksiężyc",
+      "g": "m"
+    },
+    "cross": {
+      "name": "krzyż",
+      "g": "m"
+    },
+    "heart": {
+      "name": "serce",
+      "g": "n"
+    },
+    "ellipse": {
+      "name": "elipsa",
+      "g": "f"
+    },
+    "ring": {
+      "name": "pierścień",
+      "g": "m"
+    },
+    "semicircle": {
+      "name": "półkole",
+      "g": "n"
+    },
+    "dodecagon": {
+      "name": "dwunastokąt",
+      "g": "m"
+    },
+    "pentadecagon": {
+      "name": "piętnastokąt",
+      "g": "m"
+    },
+    "icosagon": {
+      "name": "dwudziestokąt",
+      "g": "m"
+    },
+    "circleSector": {
+      "name": "wycinek koła",
+      "g": "m"
+    },
+    "lemniscate": {
+      "name": "lemniskata",
+      "g": "f"
+    },
+    "trefoil": {
+      "name": "trójliść",
+      "g": "m"
+    },
+    "quatrefoil": {
+      "name": "czwórliść",
+      "g": "m"
+    }
+  }
+}
